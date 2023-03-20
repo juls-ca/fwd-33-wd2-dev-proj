@@ -1,0 +1,9 @@
+// specific re-usable stylings
+
+// styles the link-buttons that have a border
+@mixin box-buttons {
+    border: 1px solid #fff;
+    padding: 0.5rem;
+    background-color: transparent;
+    width: fit-content;
+}

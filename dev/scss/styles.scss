@@ -1,2 +1,182 @@
 // Place your Sass imports here...
+@use 'mixins' as *;
 
+$darkblue: #244a64;
+$mediumblue: #429bd6;
+$lightblue: #bedcef;
+// TYPOGRAPHY --------------------------------------------------------
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    background-color: $darkblue;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0.25rem;
+}
+
+h1 {
+    font-weight: 700;
+    color: #fff
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+// GENERAL ELEMENTS --------------------------------------------------
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5rem 0.5rem;
+
+    // code below styles the link-buttons with boxy border
+    button {
+        @include box-buttons;
+        a {
+            text-transform: uppercase;
+            color: #fff;
+            text-decoration: none;
+        
+            &:visited, &:focus, &:hover, &:active {
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+
+// SPECIFIC SECTIONS ------------------------------------------------
+// Section: customize
+section#customize {
+    background-color: #fff;
+    
+    h2 {
+        width: 50%;
+    }
+
+    p {
+        max-width: 90%;
+    }
+}
+
+// Section: product-advisor
+section#product-advisor {
+    color: #fff;
+    
+    form {
+        border-top: 1px solid #fff;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 1.5rem 0;
+
+        label {
+            align-self: flex-start;
+            margin: 0.75rem 0 0.25rem;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 700;
+        }
+
+        select, input {
+            padding: 0.5rem;
+        }
+
+        input[type="submit"]{
+            background-color: $mediumblue;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 500;
+            border: none;
+            margin: 3rem 0;
+        }
+    }
+}
+
+// Section: about
+section#about {
+    color: #fff;
+    
+    p {
+        width: 80%;
+        margin: 2rem;
+    }
+
+    button {
+        @include box-buttons;
+        padding: 0.5rem 1rem;
+        a {
+            font-weight: 700;
+        }
+    }
+}
+
+// Section: media
+section#media {
+    background-color: $mediumblue;
+}
+
+// Section: newsletter
+section#newsletter {
+    background-color: $lightblue;
+    padding: 1rem 0.5rem;
+
+    form {
+        label {
+            font-family: 'Roboto Condensed', sans-serif;
+            color: #244a64;
+            width: 100%;
+            font-size: 1.1rem;
+        }
+
+        input[type="submit"]{
+            background-color: $mediumblue;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 700;
+            border: none;
+            padding: 0.25rem 0.75rem;
+
+        }
+    }
+}
+
+// Section: install
+
+// Section: spec
+section#install-spec {
+    article {
+        h2 {
+            color: #fff;
+            width: 60%;
+            margin: 0 auto;
+        }
+    
+        button {
+            margin: 2rem auto;
+    
+            a {
+                font-weight: 700;
+            }
+        }
+    }
+}

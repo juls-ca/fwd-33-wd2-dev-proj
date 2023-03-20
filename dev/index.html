@@ -3,11 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Put Web Page Title Here...</title>
+	<title>Vulcan | Home</title>
 
 	<!-- *** IMPORTANT *** PUT LINKS TO GOOGLE FONTS HERE -->
 	<!-- Put Google Fonts Here -->
-
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
 	<!-- end Google Fonts -->
 
 	<!-- *** IMPORTANT *** DO NOT DELETE OR EDIT THE NEXT LINE OF CODE - IT IS IMPORTANT FOR THE GULP BUILD PROCESS. SEE YOUR INSTRUCTOR FIRST IF YOU WANT TO EDIT OR DELETE THIS LINE -->
@@ -15,9 +17,134 @@
 </head>
 <body>
 <!-- Put your HTML code here... -->
-<header>hello</header>
-<main></main>
-<footer></footer>
+<header>
+	<img src="images/logo-white-vulcan.svg" alt="Vulcan logo" width="100" height="auto">
+	<nav>
+		<ul>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Products</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Parts</a></li>
+			<li><a href="#">News</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">Installation Map</a></li>
+			<li><a href="#">Product Literature</a></li>
+		</ul>
+	</nav>
+
+	<section id="hero" class="hero">
+		<h1>We design and fabricate indestructible wastewater screens. Enough said.</h1>
+		
+		<button><a href="#">View Products</a></button>
+		<button><a href="#">View Services</a></button>
+	</section>
+	
+</header>
+<main>
+	<section id="customize" class="customize">
+		<h2>Customized per Order</h2>
+		<p>Just as no two treatment plants are the same, no two of our screening, grit handling, or sludge thickening products are either. We'll help determine exactly what you need.</p>
+		<article>
+			<h3>Screening</h3>
+		</article>
+
+		<article>
+			<h3>Screenings Handling</h3>
+		</article>
+
+		<article>
+			<h3>Grit Handling</h3>
+		</article>
+
+		<article>
+			<h3>Sludge Thickening</h3>
+		</article>
+	</section>
+
+	<section id="product-advisor" class="product-advisor">
+		<h2>Product Advisor</h2>
+		<p>Find your project's perfect fit.</p>
+		<form action="post" name="product-advisor-form">
+			<label for="product-type">Product Type</label>
+			<select name="product-type" id="product-type">
+				<option value="">Select</option>
+				<option value="Opt-A1">Option 1</option>
+				<option value="Opt-A2">Option 2</option>
+			</select>
+
+			<label for="screen-location">Screen Location</label>
+			<select name="screen-location" id="screen-location">
+				<option value="">Select</option>
+				<option value="Opt-A1">Option 1</option>
+				<option value="Opt-A2">Option 2</option>
+			</select>
+
+			<label for="flow-type">Flow Type</label>
+			<select name="flow-type" id="flow-type">
+				<option value="">Select</option>
+				<option value="Opt-A1">Option 1</option>
+				<option value="Opt-A2">Option 2</option>
+			</select>
+
+			<label for="channel-depth">Channel Depth</label>
+			<select name="channel-depth" id="channel-depth">
+				<option value="">Select</option>
+				<option value="Opt-A1">Option 1</option>
+				<option value="Opt-A2">Option 2</option>
+			</select>
+
+			<label for="channel-width">Channel Width</label>
+			<select name="channel-width" id="channel-width">
+				<option value="">Select</option>
+				<option value="Opt-A1">Option 1</option>
+				<option value="Opt-A2">Option 2</option>
+			</select>
+
+			<input type="submit" value="Find My Product"/>
+		</form>
+	</section>
+
+	<section id="about" class="about">
+		<h2>Delivering clean safe water since 1975. Refreshing indeed.</h2>
+		<p>Vulcan wastewater screening equipment has played a vital role in protecting the water supply of more than 900 cities and communities throughout the world.</p>
+		<button><a href="#">About Us</a></button>
+	</section>
+
+	<section id="media" class="media">
+		<!-- This section contains a Vimeo video embed: https://vimeo.com/183929811 -->
+	</section>
+
+	<section id="newsletter" class="newsletter">
+		<form action="post" name="newsletter-form" id="newsletter-form">
+			<label for="newsletter-input">Stay in the know. Sign up for our newsletter.</label>
+			<input type="email" name="newsletter-input" id="newsletter-input" placeholder="Enter your email">
+			<input type="submit" value="submit">
+		</form>
+	</section>
+
+	<section id="install-spec" class="install-spec">
+		<article id="install" class="install">
+			<h2>Installed in a city near you</h2>
+			<button><a href="#">Find a Vulcan Install</a></button>
+		</article>
+
+		<article id="spec" class="spec">
+			<h2>Ready to spec Vulcan for your project?</h2>
+			<button><a href="#">Contact Us</a></button>
+		</article>
+	</section>		
+</main>
+
+<footer>
+	<img src="images/logo-white-vulcan.svg" alt="Vulcan logo" width="50" height="auto">
+	<ul>
+		<li><a href="#">Facebook link</a></li>
+		<li><a href="#">LinkedIn link</a></li>
+		<li>+1 712-642-2755</li>
+		<li><a href="mailto:#">Contact Us</a></li>
+	</ul>
+	<p>Copyright 2017. All rights reserved</p>
+</footer>
 
 
 
