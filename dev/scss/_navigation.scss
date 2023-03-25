@@ -1,7 +1,11 @@
+@use 'variables' as *;
+
 // Top-bar styles
 .top-bar {
     display: flex;
     justify-content: space-between;
+    background-color: $lightgrey;
+    padding: 0.5rem;
     
 }
 
@@ -54,7 +58,7 @@
 #main-navigation.open {
 	display: block;
 	height: 50vh;
-	background-color: grey;
+	background-color: $lightgrey;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -74,6 +78,10 @@ nav {
 
     li {
         flex-grow: 1;
+    }
+
+    a {
+        font-family: $condensedFont;
     }
 
 }

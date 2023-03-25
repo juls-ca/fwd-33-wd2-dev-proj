@@ -1,14 +1,7 @@
 // Place your Sass imports here...
 @use 'mixins' as *;
+@use 'varaibles' as *;
 @use 'navigation';
-
-$darkblue: #244a64;
-$mediumblue: #429bd6;
-$lightblue: #bedcef;
-$grey: #504f4f;
-
-$regularFont: 'Roboto', sans-serif;
-$condensedFont: 'Roboto Condensed', sans-serif;
 
 // TYPOGRAPHY --------------------------------------------------------
 body {
@@ -72,7 +65,7 @@ header {
     background: url(../images/header-slider-img-03.jpg);
     background-position: center;
     background-size: cover;
-    padding: 0.5rem;
+    
 }
 
 // Section: hero 
