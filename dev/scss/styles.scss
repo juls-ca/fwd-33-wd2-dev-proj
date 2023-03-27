@@ -3,6 +3,9 @@
 @use 'variables' as *;
 @use 'reset';
 @use 'navigation';
+@use 'hero';
+@use 'customize';
+@use 'product-advisor';
 
 // TYPOGRAPHY --------------------------------------------------------
 body {
@@ -71,84 +74,7 @@ header {
     
 }
 
-// Section: hero 
-section#hero {
-    gap: 1rem;
-
-    h1 {
-        margin: 3rem auto;
-    }
-
-    .box-link {
-        font-weight: 400;
-    }
-}
-
 // SPECIFIC SECTIONS ------------------------------------------------
-// Section: customize
-section#customize {
-    background-color: #fff;
-    color: $grey;
-
-    h2 {
-        width: 50%;
-    }
-
-    p {
-        color: #000;
-        width: 90%;
-    }
-}
-
-#customize article {
-    text-align: left;
-    display: flex;
-    align-items: center;
-    border-bottom: 1.5px solid #cccccc;
-    padding: 1rem;
-
-    img {
-        width: 60%;
-        margin: 0.5rem;
-    }
-}
-
-#customize article:last-child {
-    border: none;
-}
-
-// Section: product-advisor
-section#product-advisor {
-    color: #fff;
-    
-    form {
-        border-top: 1px solid #fff;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin: 1.5rem 0;
-
-        label {
-            align-self: flex-start;
-            margin: 1rem 0 0.5rem;
-            font-family: $condensedFont;
-            font-weight: 700;
-        }
-
-        select, input {
-            padding: 0.75rem;
-        }
-
-        input[type="submit"]{
-            background-color: $mediumblue;
-            color: #fff;
-            text-transform: uppercase;
-            font-weight: 500;
-            border: none;
-            margin: 3rem 0;
-        }
-    }
-}
 
 // Section: about
 section#about {
