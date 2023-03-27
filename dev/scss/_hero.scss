@@ -1,0 +1,15 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+// Section: hero
+section#hero {
+    gap: 1rem;
+
+    h1 {
+        margin: 3rem auto;
+    }
+
+    .box-link {
+        font-weight: 400;
+    }
+}

@@ -1,8 +1,13 @@
 // Place your Sass imports here...
 @use 'mixins' as *;
+@use 'fonts' as *;
 @use 'variables' as *;
 @use 'reset';
 @use 'navigation';
+@use 'hero';
+@use 'customize';
+@use 'product-advisor';
+@use 'footer';
 
 // TYPOGRAPHY --------------------------------------------------------
 body {
@@ -56,11 +61,16 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 9rem 0.5rem;
-    
+    padding: 5rem 0.5rem;
+    position: relative;
+
     a {
         @include box-link;
     }
+}
+
+div.wave {
+    @include wave;
 }
 
 // HEADER --------------------------------------------------
@@ -71,84 +81,7 @@ header {
     
 }
 
-// Section: hero 
-section#hero {
-    gap: 1rem;
-
-    h1 {
-        margin: 3rem auto;
-    }
-
-    .box-link {
-        font-weight: 400;
-    }
-}
-
 // SPECIFIC SECTIONS ------------------------------------------------
-// Section: customize
-section#customize {
-    background-color: #fff;
-    color: $grey;
-
-    h2 {
-        width: 50%;
-    }
-
-    p {
-        color: #000;
-        width: 90%;
-    }
-}
-
-#customize article {
-    text-align: left;
-    display: flex;
-    align-items: center;
-    border-bottom: 1.5px solid #cccccc;
-    padding: 1rem;
-
-    img {
-        width: 60%;
-        margin: 0.5rem;
-    }
-}
-
-#customize article:last-child {
-    border: none;
-}
-
-// Section: product-advisor
-section#product-advisor {
-    color: #fff;
-    
-    form {
-        border-top: 1px solid #fff;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin: 1.5rem 0;
-
-        label {
-            align-self: flex-start;
-            margin: 1rem 0 0.5rem;
-            font-family: $condensedFont;
-            font-weight: 700;
-        }
-
-        select, input {
-            padding: 0.75rem;
-        }
-
-        input[type="submit"]{
-            background-color: $mediumblue;
-            color: #fff;
-            text-transform: uppercase;
-            font-weight: 500;
-            border: none;
-            margin: 3rem 0;
-        }
-    }
-}
 
 // Section: about
 section#about {
@@ -191,7 +124,13 @@ section#newsletter {
             font-family: $condensedFont;
             color: #244a64;
             font-size: 1.1rem;
-            width: 100%;
+            display: block;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            
         }
 
         input {
@@ -204,21 +143,26 @@ section#newsletter {
             text-transform: uppercase;
             font-weight: 700;
             border: none;
-
         }
     }
 }
 
+div#install-spec {
+    padding: 0 0 3rem;
+    position: relative;
+    overflow: hidden;
+    padding: 0 0 5rem;
+
+    .wave {
+        background-image: url(../images/wave-blue-light.png);
+    }
+}
 
 section#install {
     background: url(../images/map.jpg);
     background-size: cover;
     background-position: center;
-    color: $grey;
-
-    h2 {
-        width: 60%;
-    }
+    color: $grey;    
 
     .box-link {
         border: 1px solid $grey;
@@ -228,6 +172,7 @@ section#install {
 
 section#spec {
     color: #fff;
+    position: relative;
 
     h2 {
         width: 60%;
@@ -235,23 +180,5 @@ section#spec {
     }
 }
 
-// FOOTER ----------------------------------------------------------
-// add phone & mail icons
 
-footer {
-    background-color: $mediumblue;
-    color: #fff;
-    font-family: $condensedFont;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 2rem 0;
 
-    ul {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        margin: 1rem;
-    }
-}
