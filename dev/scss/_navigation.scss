@@ -6,7 +6,13 @@
     justify-content: space-between;
     background-color: $lightgrey;
     padding: 0.5rem;
+    position: relative;
+    z-index: 200;
     
+}
+
+.top-nav-block {
+    display: none;
 }
 
 // Hamburger menu animation
@@ -15,11 +21,11 @@
 .hamburger-menu {
 
     display: block;
-	background-color: inherit;
+	background-color: transparent;
 	width: 55px;
 	border-style: none;
     position: relative;
-    z-index: 200;
+    
 
     &:before, &:after {
         background-color: white;
@@ -51,37 +57,109 @@
 /* Navigation styles */
 
 #main-navigation{
-	display: none;
-}
-
-
-#main-navigation.open {
-	display: block;
-	height: 50vh;
-	background-color: $lightgrey;
+    
 	position: absolute;
-	top: 0;
-	left: 0;
+    left: 0;
 	right: 0;
-}
+    font-family: $condensedFont;
+    font-size: 1.2rem;
+    overflow: hidden;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
 
-nav {
-    ul {
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
+    .main-nav-block {
+        
+        text-align: left;
         margin: 0;
+        transform: translateY(-100%);
+        transition: all 0.3s ease-in-out;
+        
+        a {
+            display: block;
+            padding: 0.3rem 1rem;
+        }
     
     }
+       
+}
 
-    li {
-        flex-grow: 1;
+#main-navigation.open {
+    background-color: $lightgrey;
+   
+    .main-nav-block {
+        transform: translateY(0);
+        
+    }
+}
+
+
+@media (min-width:48em){
+
+    header {
+        position: relative;
     }
 
-    a {
-        font-family: $condensedFont;
+    .hamburger-menu {
+        display: none;
     }
 
+    .top-bar {
+        position: absolute;
+        background-color: transparent;
+        width: 150px;
+        left: 0;
+        right: 0;
+        margin:auto;
+        padding: 0.5rem auto;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    // .nav-wrapper {
+    //     position: relative;
+    // }
+
+    // .logo{
+    //     position: absolute;
+    //     transform: translateX(50%);
+    // }
+
+   
+    #main-navigation {
+        overflow: visible;
+        transition: none;
+        
+        .main-nav-block {
+            transform: translateY(0);
+            transition: none;
+            display: flex;
+            justify-content: space-around;
+            background-color:$lightgrey;
+            width: 70%;
+            margin: 2rem auto;
+            padding: 0.5rem;
+
+    
+            li:nth-last-child(2),li:nth-last-child(1) {
+                display: none;
+            } 
+                
+        }
+
+       .top-nav-block, .left-nav-block, .right-nav-block {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        
+
+        .left-nav-block, .right-nav-block {
+            gap:1rem;
+            padding:1rem;
+        }
+
+
+    }
 }
