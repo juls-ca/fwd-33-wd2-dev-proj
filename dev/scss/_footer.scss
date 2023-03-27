@@ -1,0 +1,80 @@
+// FOOTER ----------------------------------------------------------
+@use 'mixins' as *;
+@use 'fonts' as *;
+
+footer {
+    color: #fff;
+    font-family: $condensedFont;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: $mediumblue;        
+    padding: 1rem;
+
+    .footer-content {
+
+        ul {
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+    
+        p {
+            font-size: 0.75rem;
+        }
+    }
+}
+
+@media (min-width: 768px){
+    footer {
+        display: flex;
+        justify-content: space-around;
+
+        
+    }
+
+    footer img {
+        width: 200px;
+
+    }
+
+}
+
+// FONTELLO -------------------------------------------------------
+// code from fontello
+@font-face {
+    font-family: 'fontello';
+    src: url('../fonts/fontello.eot?59188457');
+    src: url('../fonts/fontello.eot?59188457#iefix') format('embedded-opentype'),
+         url('../fonts/fontello.woff2?59188457') format('woff2'),
+         url('../fonts/fontello.woff?59188457') format('woff'),
+         url('../fonts/fontello.ttf?59188457') format('truetype'),
+         url('../fonts/fontello.svg?59188457#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  [class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: never;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .4em;
+    text-align: center;
+  
+    // For safety - reset parent styles, that can break glyph codes
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+  
+    // Font smoothing. That was taken from TWBS
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-phone-circled:before { content: '\e800'; }
+  .icon-mail-circled:before { content: '\e801'; }
