@@ -1,14 +1,14 @@
 // Place your Sass imports here...
 @use 'mixins' as *;
+@use 'fonts' as *;
 @use 'navigation';
+@use 'footer';
 
-$darkblue: #244a64;
-$mediumblue: #429bd6;
+
+$darkblue: #154a66;
+$mediumblue: #009ddc;
 $lightblue: #bedcef;
 $grey: #504f4f;
-
-$regularFont: 'Roboto', sans-serif;
-$condensedFont: 'Roboto Condensed', sans-serif;
 
 // TYPOGRAPHY --------------------------------------------------------
 body {
@@ -61,10 +61,15 @@ section {
     align-items: center;
     text-align: center;
     padding: 5rem 0.5rem;
-    
+    position: relative;
+
     a {
         @include box-link;
     }
+}
+
+div.wave {
+    @include wave;
 }
 
 // HEADER --------------------------------------------------
@@ -102,6 +107,10 @@ section#customize {
         color: #000;
         width: 90%;
     }
+
+    .wave {
+        background-image: url(../images/wave-blue-dark.png);
+    }
 }
 
 #customize article {
@@ -117,8 +126,8 @@ section#customize {
     }
 }
 
-#customize article:last-child {
-    border: none;
+#customize:last-child {
+    border-bottom: none;
 }
 
 // Section: product-advisor
@@ -195,7 +204,13 @@ section#newsletter {
             font-family: $condensedFont;
             color: #244a64;
             font-size: 1.1rem;
-            width: 100%;
+            display: block;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            
         }
 
         input {
@@ -208,21 +223,26 @@ section#newsletter {
             text-transform: uppercase;
             font-weight: 700;
             border: none;
-
         }
     }
 }
 
+div#install-spec {
+    padding: 0 0 3rem;
+    position: relative;
+    overflow: hidden;
+    padding: 0 0 5rem;
+
+    .wave {
+        background-image: url(../images/wave-blue-light.png);
+    }
+}
 
 section#install {
     background: url(../images/map.jpg);
     background-size: cover;
     background-position: center;
-    color: $grey;
-
-    h2 {
-        width: 60%;
-    }
+    color: $grey;    
 
     .box-link {
         border: 1px solid $grey;
@@ -232,6 +252,7 @@ section#install {
 
 section#spec {
     color: #fff;
+    position: relative;
 
     h2 {
         width: 60%;
@@ -239,23 +260,5 @@ section#spec {
     }
 }
 
-// FOOTER ----------------------------------------------------------
-// add phone & mail icons
 
-footer {
-    background-color: $mediumblue;
-    color: #fff;
-    font-family: $condensedFont;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 2rem 0;
 
-    ul {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        margin: 1rem;
-    }
-}

@@ -40,6 +40,7 @@
 		<a href="#" class="box-link">View Products</a>
 		<a href="#" class="box-link">View Services</a>
 	</section>
+
 </header>
 <main>
 	<section id="customize" class="customize">
@@ -142,34 +143,40 @@
 	<section id="newsletter" class="newsletter">
 		<form action="post" name="newsletter-form" id="newsletter-form">
 			<label for="newsletter-input">Stay in the know. Sign up for our newsletter.</label>
-			<input type="email" name="newsletter-input" id="newsletter-input" placeholder="Enter your email">
-			<input type="submit" value="submit">
+			<div>
+				<input type="email" name="newsletter-input" id="newsletter-input" placeholder="Enter your email">
+				<input type="submit" value="submit">
+			</div>
 		</form>
 	</section>
 
-	<section id="install" class="install">
-		<h2>Installed in a city near you</h2>
-		<a href="#" class="box-link">Find a Vulcan Install</a>
-	</section>
-
-	<section id="spec" class="spec">
-		<h2>Ready to spec Vulcan for your project?</h2>
-		<a href="#" class="box-link">Contact Us</a>
-	</section>
+	<div id="install-spec" class="install-spec">
+		<section id="install" class="install">
+			<h2>Installed in a city near you</h2>
+			<a href="#" class="box-link">Find a Vulcan Install</a>
+		</section>
+	
+		<section id="spec" class="spec">
+			<h2>Ready to spec Vulcan for your project?</h2>
+			<a href="#" class="box-link">Contact Us</a>
+		</section>
+		<div class="wave"></div>
+	</div>
+	
 </main>
-
 <footer>
 	<img src="images/logo-white-vulcan.svg" alt="Vulcan logo" width="80" height="auto">
-	<ul>
-		<li><a href="#"><img src="images/icon-white-facebook.png" alt="facebook icon" width="25" height="auto"></a></li>
-		<li><a href="#"><img src="images/icon-white-linkedin.png" alt="linkedin icon" width="25" height="auto"></a></li>
-		<li>+1 712-642-2755</li>
-		<li><a href="mailto:#">Contact Us</a></li>
-	</ul>
-	<p>Copyright 2017. All rights reserved</p>
+	
+	<div class="footer-content">
+		<ul>
+			<li><a href="#"><img src="images/icon-white-facebook.png" alt="facebook icon" width="20" height="auto"></a></li>
+			<li><a href="#"><img src="images/icon-white-linkedin.png" alt="linkedin icon" width="20" height="auto"></a></li>
+			<li><i class="icon-phone-circled"></i>+1 712-642-2755</li>
+			<li><i class="icon-mail-circled"></i><a href="mailto:#">Contact Us</a></li>
+		</ul>
+		<p>Copyright 2017. All rights reserved</p>
+	</div>
 </footer>
-
-
 
 
 <!-- *** IMPORTANT *** If you do not require the jQuery Library then feel free to delete the next line -->
