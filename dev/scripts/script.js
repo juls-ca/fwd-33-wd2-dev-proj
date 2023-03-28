@@ -31,4 +31,3 @@ function closeMenu (){
   btnMenu.classList.remove('clicked');
   nav.classList.remove('open');
 }
- 
