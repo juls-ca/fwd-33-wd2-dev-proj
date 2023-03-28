@@ -1,6 +1,6 @@
 // FOOTER ----------------------------------------------------------
 @use 'mixins' as *;
-@use 'fonts' as *;
+@use 'variables' as *;
 
 footer {
     color: #fff;
@@ -59,12 +59,13 @@ footer {
     font-family: "fontello";
     font-style: normal;
     font-weight: normal;
-    speak: never;
+    // speak: never;
     display: inline-block;
     text-decoration: inherit;
     width: 1em;
     margin-right: .4em;
     text-align: center;
+    color: white;
   
     // For safety - reset parent styles, that can break glyph codes
     font-variant: normal;
