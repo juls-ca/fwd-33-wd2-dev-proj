@@ -17,30 +17,42 @@ section#customize {
         width: 90%;
     }
 
-    article:last-child{
-        padding-bottom: 5rem;
-    }
+    article {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        border-bottom: 1.5px solid #cccccc;
+        padding: 1rem;
 
+        &:nth-child(6){
+            padding-bottom: 4rem;
+            border-bottom: none;
+        }
+    
+        img {
+            width: 60%;
+            margin: 0.5rem;
+        }
+    }
 
     .wave{
         background-image: url(/images/wave-blue-dark.png);
         @include wave;
+        bottom: -5px;
+        width:140%;
+        background-size: 120% 80%;
+        height: 140px;
     }
 }
 
-#customize article {
-    text-align: left;
-    display: flex;
-    align-items: center;
-    border-bottom: 1.5px solid #cccccc;
-    padding: 1rem;
-
-    img {
-        width: 60%;
-        margin: 0.5rem;
+@media(min-width:48em){
+    section#customize {
+        .wave{
+            
+            width:100%;
+            background-size: 110% 100%;
+        }
     }
-}
-
-#customize article:last-child {
-    border: none;
+    
+    
 }

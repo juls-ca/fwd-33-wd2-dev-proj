@@ -4,8 +4,9 @@
 // Section: product-advisor
 section#product-advisor {
     color: #fff;
-    padding: 1.5rem 0.5rem;
-        
+    padding: 0 0.5rem 1.5rem;
+
+           
     form {
         border-top: 1px solid #fff;
         display: flex;
@@ -40,5 +41,17 @@ section#product-advisor {
     }
 
     
+    
+}
+
+
+@media(min-width:48em){
+
+    section#product-advisor{
+
+        p:nth-child(2){
+            color:$mediumblue;
+        }
+    }
     
 }
