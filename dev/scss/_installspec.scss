@@ -40,15 +40,15 @@ div#install-spec {
         display: flex;
         flex-direction: row-reverse;
     
-        section {
+        section#install, section#spec {
             width: 50%;
             padding: 5rem 0 8rem;
-        }
-
-        .box-link {
-            @include box-link;
-            background-color: $mediumblue;
-            border: none;
+        
+            .box-link {
+                @include box-link;
+                background-color: $mediumblue;
+                border: none;
+            }
         }
 
         .wave {
