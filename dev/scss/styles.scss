@@ -60,8 +60,7 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 5rem 0.5rem;
-    position: relative;
+    padding: 9rem 0.5rem;
 
     a {
         @include box-link;
@@ -72,13 +71,6 @@ div.wave {
     @include wave;
 }
 
-// HEADER --------------------------------------------------
-header {
-    background: url(../images/header-slider-img-03.jpg);
-    background-position: center;
-    background-size: cover;
-    
-}
 
 // SPECIFIC SECTIONS ------------------------------------------------
 
@@ -153,7 +145,7 @@ div#install-spec {
     padding: 0 0 5rem;
 
     .wave {
-        background-image: url(../images/wave-blue-light.png);
+        background-image: url(/images/wave-blue-light.png);
     }
 }
 
