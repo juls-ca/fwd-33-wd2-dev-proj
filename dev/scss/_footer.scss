@@ -3,12 +3,16 @@
 @use 'variables' as *;
 
 footer {
+    background-color: $mediumblue;        
     color: #fff;
     font-family: $condensedFont;
     text-transform: uppercase;
     text-align: center;
-    background-color: $mediumblue;        
     padding: 1rem;
+
+    .vulcan-logo {
+        margin: 1rem auto;
+    }
 
     .footer-content {
 
@@ -22,23 +26,33 @@ footer {
     
         p {
             font-size: 0.75rem;
+            margin: 0.5rem 0;
         }
     }
 }
 
-@media (min-width: 768px){
+@media (min-width: 48em){
     footer {
         display: flex;
-        justify-content: space-around;
+        align-items: center;
 
-        
+        .vulcan-logo {
+            width: 150px;
+            margin: 0 auto 2rem;
+        }
+
+        .footer-content {
+            width: 60%;
+        }
     }
+}
 
-    footer img {
-        width: 200px;
-
+@media (min-width: 64em){
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
     }
-
 }
 
 // FONTELLO -------------------------------------------------------
