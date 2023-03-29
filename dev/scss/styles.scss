@@ -6,6 +6,7 @@
 @use 'hero';
 @use 'customize';
 @use 'product-advisor';
+@use 'installspec';
 @use 'footer';
 
 // TYPOGRAPHY --------------------------------------------------------
@@ -137,39 +138,3 @@ section#newsletter {
         }
     }
 }
-
-div#install-spec {
-    padding: 0 0 3rem;
-    position: relative;
-    overflow: hidden;
-    padding: 0 0 5rem;
-
-    .wave {
-        background-image: url(/images/wave-blue-light.png);
-    }
-}
-
-section#install {
-    background: url(../images/map.jpg);
-    background-size: cover;
-    background-position: center;
-    color: $grey;    
-
-    .box-link {
-        border: 1px solid $grey;
-        color: $grey;
-    }
-}
-
-section#spec {
-    color: #fff;
-    position: relative;
-
-    h2 {
-        width: 60%;
-        margin: 0 auto 2rem;
-    }
-}
-
-
-
