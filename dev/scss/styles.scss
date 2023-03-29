@@ -6,6 +6,7 @@
 @use 'hero';
 @use 'customize';
 @use 'product-advisor';
+@use 'newsletter';
 @use 'installspec';
 @use 'footer';
 
@@ -104,37 +105,4 @@ section#media {
         margin: 0 auto;
     }
 
-}
-
-// Section: newsletter
-section#newsletter {
-    background-color: $lightblue;
-    padding: 1rem 0.5rem;
-
-    form {
-        label {
-            font-family: $condensedFont;
-            color: #244a64;
-            font-size: 1.1rem;
-            display: block;
-        }
-
-        div {
-            display: flex;
-            justify-content: space-between;
-            
-        }
-
-        input {
-            padding: 0.25rem 0.75rem;
-        }
-
-        input[type="submit"]{
-            background-color: $mediumblue;
-            color: #fff;
-            text-transform: uppercase;
-            font-weight: 700;
-            border: none;
-        }
-    }
 }
