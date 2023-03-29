@@ -1,0 +1,60 @@
+// SECTION: NEWSLETTER
+@use 'mixins' as *;
+@use 'variables' as *;
+
+section#newsletter {
+    background-color: $lightblue;
+    padding: 1rem 0.5rem;
+
+    form {
+        width: 100%;
+
+        label {
+            color: #244a64;
+            font-family: $condensedFont;
+            font-size: 1.1rem;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 1rem auto 0;
+        }
+
+        input {
+            border: none;
+            padding: 0.5rem 0.75rem;
+            width: 100%;
+            max-width: 40rem;
+        }
+
+        input[type="submit"]{
+            background-color: $mediumblue;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 700;
+            width: fit-content;
+        }
+    }
+}
+
+@media (min-width: 48em) {
+    section#newsletter form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 1rem;
+        max-width: 55rem;
+
+        div {
+            flex-grow: 1;
+            margin: 0 auto;
+        }
+
+        label {
+            font-size: 1.4rem;
+        }
+    }
+}
