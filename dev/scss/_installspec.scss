@@ -24,7 +24,6 @@ section#install {
     padding: 7rem 0;   
 
     .box-link {
-        @include box-link;
         border: 1px solid $grey;
         color: $grey;
     }
@@ -33,13 +32,39 @@ section#install {
 section#spec {
     color: #fff;
     position: relative;
-    padding: 4rem 0 9rem;
-
-    h2 {
-        margin: 0 auto 2rem;
-    }
+    padding: 4rem 0 7rem;
 
 }
 
+@media (min-width: 48em) {
+    div#install-spec {
+        display: flex;
+        flex-direction: row-reverse;
+    
+        section {
+            width: 50%;
+            padding: 5rem 0 8rem;
+        }
 
+        .box-link {
+            @include box-link;
+            background-color: $mediumblue;
+            border: none;
+        }
 
+        .wave {
+            @include wave;
+            width: 100%;
+            background-size: 120% 100%;
+        }
+    }
+}
+
+@media (min-width: 64em){
+    div#install-spec {
+        h2 {
+            max-width: 16rem;
+            margin: 0 auto 2rem;
+        }
+    }
+}
