@@ -5,6 +5,8 @@
 section#customize {
     background-color: #fff;
     color: $grey;
+    position: relative;
+    
 
     h2 {
         width: 50%;
@@ -13,6 +15,16 @@ section#customize {
     p {
         color: #000;
         width: 90%;
+    }
+
+    article:last-child{
+        padding-bottom: 5rem;
+    }
+
+
+    .wave{
+        background-image: url(/images/wave-blue-dark.png);
+        @include wave;
     }
 }
 

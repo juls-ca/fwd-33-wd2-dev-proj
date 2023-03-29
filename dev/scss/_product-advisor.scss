@@ -4,7 +4,8 @@
 // Section: product-advisor
 section#product-advisor {
     color: #fff;
-    
+    padding: 1.5rem 0.5rem;
+        
     form {
         border-top: 1px solid #fff;
         display: flex;
@@ -21,6 +22,11 @@ section#product-advisor {
 
         select, input {
             padding: 0.75rem;
+            background-color:#BBBBBB;
+        }
+
+        #product-type{
+            background-color: #fff;
         }
 
         input[type="submit"]{
@@ -29,7 +35,10 @@ section#product-advisor {
             text-transform: uppercase;
             font-weight: 500;
             border: none;
-            margin: 3rem 0;
+            margin-top: 3rem;
         }
     }
+
+    
+    
 }
