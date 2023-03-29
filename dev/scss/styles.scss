@@ -63,7 +63,8 @@ section {
     align-items: center;
     text-align: center;
     padding: 4rem 0.5rem;
-
+    overflow: hidden;
+    
     a {
         @include box-link;
     }
