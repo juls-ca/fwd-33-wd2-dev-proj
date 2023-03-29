@@ -1,4 +1,6 @@
 // SECTION: NEWSLETTER
+@use 'mixins' as *;
+@use 'variables' as *;
 
 section#newsletter {
     background-color: $lightblue;
