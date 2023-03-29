@@ -7,21 +7,26 @@ section#newsletter {
     padding: 1rem 0.5rem;
 
     form {
+        width: 100%;
+
         label {
-            font-family: $condensedFont;
             color: #244a64;
+            font-family: $condensedFont;
             font-size: 1.1rem;
-            display: block;
         }
 
         div {
             display: flex;
-            justify-content: space-between;
-            
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 1rem auto 0;
         }
 
         input {
-            padding: 0.25rem 0.75rem;
+            border: none;
+            padding: 0.5rem 0.75rem;
+            width: 100%;
+            max-width: 40rem;
         }
 
         input[type="submit"]{
@@ -29,7 +34,27 @@ section#newsletter {
             color: #fff;
             text-transform: uppercase;
             font-weight: 700;
-            border: none;
+            width: fit-content;
+        }
+    }
+}
+
+@media (min-width: 48em) {
+    section#newsletter form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 1rem;
+        max-width: 55rem;
+
+        div {
+            flex-grow: 1;
+            margin: 0 auto;
+        }
+
+        label {
+            font-size: 1.4rem;
         }
     }
 }
