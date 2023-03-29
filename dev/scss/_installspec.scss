@@ -14,26 +14,25 @@ div#install-spec {
     h2 {
         width: 60%;
     }
-}
 
-section#install {
-    background: url(../images/map.jpg);
-    background-size: cover;
-    background-position: center;
-    color: $grey; 
-    padding: 7rem 0;   
-
-    .box-link {
-        border: 1px solid $grey;
-        color: $grey;
+    section#install {
+        background: url(../images/map.jpg);
+        background-size: cover;
+        background-position: center;
+        color: $grey; 
+        padding: 7rem 0;   
+    
+        .box-link {
+            border: 1px solid $grey;
+            color: $grey;
+        }
     }
-}
 
-section#spec {
-    color: #fff;
-    position: relative;
-    padding: 4rem 0 7rem;
-
+    section#spec {
+        color: #fff;
+        position: relative;
+        padding: 4rem 0 7rem;
+    }
 }
 
 @media (min-width: 48em) {
