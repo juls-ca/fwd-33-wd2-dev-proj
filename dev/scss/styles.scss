@@ -6,6 +6,7 @@
 @use 'hero';
 @use 'customize';
 @use 'product-advisor';
+@use 'media';
 @use 'newsletter';
 @use 'installspec';
 @use 'footer';
@@ -63,7 +64,8 @@ section {
     align-items: center;
     text-align: center;
     padding: 4rem 0.5rem;
-
+    overflow: hidden;
+    
     a {
         @include box-link;
     }
@@ -91,18 +93,4 @@ section#about {
     .box-link {
         padding: 0.75rem 1.5rem;
     }
-}
-
-// Section: media
-//fix size and spacing
-section#media {
-    background-color: $mediumblue;
-
-    iframe {
-        border: 1rem solid $darkblue;
-        height: 100%;
-        background-color: green;
-        margin: 0 auto;
-    }
-
 }
