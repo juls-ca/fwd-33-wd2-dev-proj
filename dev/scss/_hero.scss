@@ -4,81 +4,203 @@
 // Section: hero
 section#hero {
     gap: 1rem;
-    padding: 9rem 0.5rem;
+    padding: 15rem 0.5rem;
+
 
     h1 {
-        margin: 3rem auto;
+        margin:  -12rem auto 2rem;
+        font-size: 1.5rem;
+        max-width: 100%;
     }
 
     .box-link {
         font-weight: 400;
+        margin-bottom: 1rem;
+    }
+
+    .box-link-container {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 18rem;
     }
 
     .wave {
+        @include wave;
         background-image: url(/images/wave-white.png);
-        width: 100%;
-        bottom: 8rem;
+        width:100%;
+        height: 8rem;
+        bottom: 15rem;
+        background-position: 30% 50%;
+        background-size: 200% 100%;
+
     }
 
+
+// Dots
+
+    .ellipses-holder {
+        position: absolute;
+        bottom: 24rem;
+    }
+
+
     .ellipses {
-        height: 15px;
-        width: 15px;
+        height: 10px;
+        width: 10px;
         margin: 0 2px;
-        background-color: #bbb;
+        background-color: #ffffff;
         border-radius: 50%;
         display: inline-block;
         transition: background-color 0.6s ease;
 
     }
+    
+    .active,
+    .ellipses:hover {
+        background-color: $mediumblue;
+      }
+
+
 }
+
+@media(min-width:48em){
+    section#hero {
+        gap: 1rem;
+        padding:0.75rem;
+    
+        h1 {
+            margin: 15rem auto;
+            font-size:2.75rem;
+            max-width: 100%;
+        }
+
+        .box-link-container {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            top: 30rem;
+        }
+
+        .box-link {
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+        
+        .wave {
+            width:100%;
+            bottom: 7rem;
+            background-size: 110% 100%;
+    
+        }
+
+    //Dots 
+        .ellipses-holder {
+            position: absolute;
+            bottom: 15rem;
+        }
+
+
+        .ellipses {
+            height: 0.9rem;
+            width: 0.9rem;
+            margin: 0 0.4rem;
+        }
+
+    }
+
+}
+
+
+
+
+//Slideshow portion
 
 div#slideshow{
     overflow: hidden;
     width: 100%;
-    height: 10rem;
+    
+    .slide:nth-child(1) {
+        background-image: url(/images/header-slider-img-01.jpg);
+        // animation-delay: 0s;
+    }
+    
+    .slide:nth-child(2) {
+        background-image: url(/images/header-slider-img-02.jpg);
+        // animation-delay: 2.5s;
+    }
+    
+    .slide:nth-child(3) {
+        background-image: url(/images/header-slider-img-03.jpg);
+        // animation-delay: 5s;
+    }
     
     .slide{
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 35rem;
         background-size: cover;
         background-position: center;
-        animation: fade 7.5s infinite;
+        z-index: -2;
     }
 
 
-    @keyframes fade {
-        0%, 30%, 100% {
-          opacity: 1;
-          animation-timing-function: ease;
-          z-index: -1;
+
+
+    
+// Animation 
+    .show {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      
+      @-webkit-keyframes fade {
+        from {
+          opacity: 0
         }
-        35% {
-          opacity: 0;
-          animation-timing-function: step-end;
-          z-index: -1;
+        to {
+            opacity: 1
         }
-        96% {
-          opacity: 1;
-          animation-timing-function: step-end;
-          z-index: -2;
+      }
+     
+      @keyframes fade {
+          from {
+          opacity: 0
+        }
+        to {
+          opacity: 1
         }
       }
 
-    .slide:nth-child(1) {
-        background-image: url(/images/header-slider-img-01.jpg);
-        animation-delay: 0s;
+    // No JS Automatic slideshow  
+    // @keyframes fade {
+    //     0%, 30%, 100% {
+    //       opacity: 1;
+    //       animation-timing-function: ease;
+    //       z-index: -1;
+    //     }
+    //     35% {
+    //       opacity: 0;
+    //       animation-timing-function: step-end;
+    //       z-index: -1;
+    //     }
+    //     96% {
+    //       opacity: 1;
+    //       animation-timing-function: step-end;
+    //       z-index: -2;
+    //     }
+    //   }
+
     }
 
-    .slide:nth-child(2) {
-        background-image: url(/images/header-slider-img-02.jpg);
-        animation-delay: 2.5s;
-    }
-
-    .slide:nth-child(3) {
-        background-image: url(/images/header-slider-img-03.jpg);
-        animation-delay: 5s;
+@media(min-width:48em){
+    div#slideshow {
+        .slide{
+            height: 42rem;
+        }
     }
 }

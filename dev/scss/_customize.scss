@@ -35,20 +35,24 @@ section#customize {
         }
     }
 
+
+
+
     .wave{
         background-image: url(/images/wave-blue-dark.png);
         @include wave;
         bottom: -5px;
-        width:140%;
+
+        width: 100%;
         background-size: 120% 80%;
         height: 140px;
+
     }
 }
 
 @media(min-width:48em){
     section#customize {
         .wave{
-            
             width:100%;
             background-size: 110% 100%;
         }
