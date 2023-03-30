@@ -1,5 +1,9 @@
 @use 'variables' as *;
 
+//Header styles
+
+
+
 // Top-bar styles
 .top-bar {
     display: flex;
@@ -103,7 +107,6 @@
     .top-bar {
         position: absolute;
         background-color: transparent;
-        width: 700px;
         left: 0;
         right: 0;
         top: 2rem;
@@ -125,7 +128,7 @@
         .main-nav-block {
             transform: translateY(0);
             position: absolute;
-            max-width: 43.75em;
+            max-width: 43.75rem;
             top: 6rem;
             left: 0;
             right: 0;
@@ -148,7 +151,7 @@
         }
 
         .top-nav-block{
-            max-width: 43.75em;
+            max-width: 43.75rem;
             margin: auto;
             justify-content: space-between;
         }
@@ -161,3 +164,15 @@
         
     }
 }
+
+@media (min-width: 80em){
+
+    #main-navigation{
+
+        .top-nav-block{
+            max-width:95%;
+            
+        }
+    }
+}
+    
