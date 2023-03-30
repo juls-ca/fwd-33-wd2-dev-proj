@@ -27,8 +27,26 @@ section#customize {
         width: 60%;
         margin: 0.5rem;
     }
+
+
+    .wave{
+        background-image: url(/images/wave-blue-dark.png);
+        @include wave;
+        bottom: -5px;
+        width: 100%;
+        background-size: 120% 80%;
+        height: 140px;
+        overflow: hidden;
+    }
 }
 
-#customize article:last-child {
-    border: none;
+@media(min-width:48em){
+    section#customize {
+        .wave{
+            width:100%;
+            background-size: 110% 100%;
+        }
+    }
+    
+    
 }
