@@ -71,5 +71,5 @@ function showSlides() {
    if(timeoutId) {
       clearTimeout(timeoutId);
    }
-  timeoutId = setTimeout(showSlides, 5000); // Change image every 5 seconds
+  timeoutId = setTimeout(showSlides, 3500); // Change image every 3.5 seconds
 }
