@@ -6,11 +6,6 @@ div#install-spec {
     position: relative;
     overflow: hidden;
     
-    .wave {
-        @include wave;
-        background-image: url(/images/wave-blue-light.png);
-    }
-
     h2 {
         width: 60%;
     }
@@ -33,6 +28,12 @@ div#install-spec {
         position: relative;
         padding: 4rem 0 7rem;
     }
+
+    .wave {
+        @include wave;
+        background-image: url(/images/wave-blue-light.png);
+        bottom: -5%;
+    }
 }
 
 @media (min-width: 48em) {
@@ -54,7 +55,7 @@ div#install-spec {
         .wave {
             @include wave;
             width: 100%;
-            background-size: 120% 100%;
+            background-size: 120% 90%;
         }
     }
 }
