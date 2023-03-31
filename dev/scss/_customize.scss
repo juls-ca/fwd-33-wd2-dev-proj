@@ -131,6 +131,10 @@ section#customize {
             font-size: 1.5rem;
             z-index: 5;
         }
+
+        a{
+            margin: 2rem auto;
+        }
         
         .break-point::before {
             content: "hiddentext";
