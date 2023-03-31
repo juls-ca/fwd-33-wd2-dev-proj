@@ -1,7 +1,9 @@
 @use 'variables' as *;
 
 //Header styles
-
+header {
+    position: relative;
+}
 
 
 // Top-bar styles
@@ -70,7 +72,7 @@
     overflow: hidden;
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;
-    z-index: 200;
+    
 
     .main-nav-block {
         
@@ -90,6 +92,7 @@
 
 #main-navigation.open {
     background-color: $lightgrey;
+    z-index: 200;
    
     .main-nav-block {
         transform: translateY(0);
@@ -110,7 +113,7 @@
         background-color: transparent;
         left: 0;
         right: 0;
-        top: 2rem;
+        top: 2.5rem;
         margin:auto;
         padding: 0.5rem;
 
@@ -128,9 +131,10 @@
         
         .main-nav-block {
             transform: translateY(0);
+            transition: none;
             position: absolute;
             max-width: 43.75rem;
-            top: 6rem;
+            top: 6.5rem;
             left: 0;
             right: 0;
             transition: none;
@@ -166,9 +170,21 @@
     }
 }
 
-@media (min-width: 80em){
+@media (min-width: 64em){
+
+    .top-bar{
+        top: 3rem;
+
+        img{
+            width: 180px;
+        }
+    }
 
     #main-navigation{
+
+        .main-nav-block {
+            top: 8.5rem;
+        }
 
         .top-nav-block{
             max-width:95%;
