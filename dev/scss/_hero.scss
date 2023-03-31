@@ -5,7 +5,7 @@
 section#hero {
     gap: 1rem;
     padding: 15rem 0.5rem;
-    position: relative;
+    // position: relative;
 
 
     h1 {
@@ -18,13 +18,14 @@ section#hero {
         font-weight: 400;
         margin-bottom: 1rem;
         @include box-link;
+        width: 8rem;
     }
 
     .box-link-container {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 12rem;
+        top: 16rem;
     }
 
     .wave {
@@ -87,6 +88,7 @@ section#hero {
         .box-link {
             font-weight: 600;
             font-size: 1.25rem;
+            width: fit-content;
         }
 
         .wave {
@@ -135,6 +137,7 @@ section#hero {
         .box-link {
             font-weight: 600;
             font-size: 1.25rem;
+            
         }
         
         .wave {
