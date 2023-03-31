@@ -31,7 +31,7 @@ section#hero {
 
     .wave {
         @include wave;
-        background-image: url(/images/wave-white.png);
+        background-image: url(../images/wave-white.png);
         bottom: -1rem;
 
     }
@@ -169,17 +169,17 @@ div#slideshow{
     width: 100%;
     
     .slide:nth-child(1) {
-        background-image: url(/images/header-slider-img-01.jpg);
+        background-image: url(../images/header-slider-img-01.jpg);
         // animation-delay: 0s;
     }
     
     .slide:nth-child(2) {
-        background-image: url(/images/header-slider-img-02.jpg);
+        background-image: url(../images/header-slider-img-02.jpg);
         // animation-delay: 2.5s;
     }
     
     .slide:nth-child(3) {
-        background-image: url(/images/header-slider-img-03.jpg);
+        background-image: url(../images/header-slider-img-03.jpg);
         // animation-delay: 5s;
     }
     
