@@ -1,0 +1,16 @@
+// Section: about
+section#about {
+    background-image: url(../images/bg-section-about-us.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    
+    p {
+        width: 80%;
+        margin: 2rem;
+    }
+
+    .box-link {
+        padding: 0.75rem 1.5rem;
+    }
+}

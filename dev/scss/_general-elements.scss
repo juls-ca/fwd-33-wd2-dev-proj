@@ -1,0 +1,22 @@
+@use 'mixins' as *;
+
+// GENERAL ELEMENTS --------------------------------------------------
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 0.5rem;
+    overflow: hidden;
+    
+    a {
+        @include box-link;
+    }
+}
