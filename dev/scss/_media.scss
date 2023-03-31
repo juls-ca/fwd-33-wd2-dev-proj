@@ -2,15 +2,27 @@
 @use 'mixins' as *;
 @use 'variables' as *;
 
-
 section#media {
     background-color: $mediumblue;
+    padding: 4rem;
+    margin: 0 auto;
 
-    iframe {
-        border: 1rem solid $darkblue;
-        height: 100%;
+    div {      
+        border: 0.75rem solid $darkblue;
         background-color: green;
-        margin: 0 auto;
-    }
+        width: 220px;
+        height: 130px;
 
+        iframe {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 48em){
+    section#media div {
+        height: 360px;
+        width: 600px;
+    }
 }
