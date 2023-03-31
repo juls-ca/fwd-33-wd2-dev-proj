@@ -1,4 +1,4 @@
-@use 'mixins' as *;
+                         @use 'mixins' as *;
 @use 'variables' as *;
 
 // Section: customize
@@ -47,10 +47,6 @@ section#customize {
         @include wave;
         bottom: -5px;
 
-        width: 100%;
-        background-size: 120% 80%;
-        height: 140px;
-
     }
 }
 
@@ -78,11 +74,12 @@ section#customize {
             color: black;
             font-weight: 300;
             text-decoration: underline;
+            margin: 1rem auto;
         }
         
         .wave{
             width:100%;
-            background-size: 110% 100%;
+            background-size: 120% 100%;
         }
 
         article {
